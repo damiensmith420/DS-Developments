@@ -13,8 +13,8 @@
       "name": "SaveVault",
       "description": "Back up game save files to your own Google Drive.",
       "url": "apps/savevault/index.html",
-      "privacy_policy": "apps/savevault/index.html?tab=privacy",
-      "terms_of_service": "apps/savevault/index.html?tab=tos",
+      "privacy_policy": "apps/savevault/privacy.html",
+      "terms_of_service": "apps/savevault/tos.html",
       "source": "https://github.com/damiensmith420/savevault",
       "platform": "Windows",
       "license": "MIT"

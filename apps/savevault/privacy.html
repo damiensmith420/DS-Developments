@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SaveVault — Privacy Policy</title>
+  <meta name="description" content="Privacy Policy for SaveVault by Damien Smith. SaveVault collects no personal data and stores nothing outside your own Google Drive." />
+  <link rel="stylesheet" href="../../css/style.css" />
+</head>
+<body>
+
+  <!-- ── NAV ──────────────────────────────────────────────── -->
+  <nav>
+    <a class="nav-brand" href="../../index.html">
+      <span class="dot"></span>
+      DS Developments
+    </a>
+    <ul class="nav-links">
+      <li><a href="../../index.html#about">About</a></li>
+      <li><a href="../../index.html#projects">Projects</a></li>
+      <li>
+        <div class="dropdown" id="appsDropdown">
+          <button class="dropdown-toggle" onclick="toggleDropdown()" aria-haspopup="true" aria-expanded="false">
+            Apps
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+              <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="dropdown-menu" role="menu">
+            <a href="index.html" role="menuitem">
+              <span class="app-icon">SV</span>
+              SaveVault
+            </a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- ── APP PAGE ───────────────────────────────────────────── -->
+  <div class="app-page">
+
+    <div class="app-hero">
+      <div class="app-hero-icon">💾</div>
+      <h1>SaveVault</h1>
+      <p>Back up your game saves directly to your own Google Drive. No servers. No subscriptions. Just your files, your account.</p>
+
+      <!-- Tab bar — links to separate pages -->
+      <div class="tab-bar">
+        <a href="index.html"   class="tab-btn">🏠 Overview</a>
+        <a href="privacy.html" class="tab-btn active">🔒 Privacy Policy</a>
+        <a href="tos.html"     class="tab-btn">📄 Terms of Service</a>
+      </div>
+    </div>
+
+    <!-- ── CONTENT ────────────────────────────────────────── -->
+    <div class="tab-content">
+      <article class="legal">
+
+        <h2>1. Overview</h2>
+        <p>
+          SaveVault is a free, open-source desktop application for Windows that backs up your video game
+          save files to your own Google Drive account. It is a personal utility — it has no backend
+          servers, no user accounts, no analytics, and no data collection of any kind.
+        </p>
+
+        <h2>2. Data We Do Not Collect</h2>
+        <p>SaveVault does not collect, transmit, store, or share any personal data. Specifically:</p>
+        <ul>
+          <li>No telemetry or usage statistics are recorded.</li>
+          <li>No crash reports are sent anywhere.</li>
+          <li>No analytics libraries are included.</li>
+          <li>No advertising identifiers are used.</li>
+          <li>No email addresses, names, or any other personally identifiable information are collected by the application or its developer.</li>
+        </ul>
+
+        <h2>3. Google Account Access</h2>
+        <p>
+          To back up your saves, SaveVault asks you to sign in with your Google account using the
+          standard OAuth 2.0 consent screen. SaveVault requests only the following permission scope:
+        </p>
+        <div class="highlight-box">
+          <code>https://www.googleapis.com/auth/drive.file</code>
+        </div>
+        <p>
+          This scope limits the application so that it can <strong>only</strong> see and modify files that
+          SaveVault itself created. It cannot read, access, browse, list, modify, or delete any other
+          files or folders in your Google Drive.
+        </p>
+        <p>Your OAuth token is stored locally on your own computer at:</p>
+        <div class="highlight-box">
+          <code>%USERPROFILE%\.savevault\token.json</code>
+        </div>
+        <p>
+          This file never leaves your machine except through the standard Google OAuth token-refresh
+          mechanism that communicates directly with Google's servers. The developer of SaveVault never
+          receives, sees, or has access to your token, your email address, or any content of your
+          Google Drive.
+        </p>
+
+        <h2>4. Your Save Files</h2>
+        <p>
+          Your save files are uploaded directly from your PC to your own Google Drive account using the
+          Google Drive API. They are not routed through any third-party server. The developer of SaveVault
+          has no access to your files.
+        </p>
+
+        <h2>5. Third-Party Services</h2>
+        <p>
+          SaveVault interacts only with Google's OAuth 2.0 and Google Drive v3 APIs. Your use of
+          Google services is governed by Google's own
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>.
+        </p>
+
+        <h2>6. Changes to This Policy</h2>
+        <p>
+          If this policy is ever updated, the new version will be committed to the SaveVault GitHub
+          repository with an updated date. The current version always reflects the current release.
+        </p>
+
+        <h2>7. Contact</h2>
+        <p>
+          SaveVault is an open-source project. For questions or concerns, please open an issue on the
+          <a href="https://github.com/damiensmith420/savevault" target="_blank" rel="noopener">GitHub repository</a>.
+        </p>
+
+        <hr class="divider" />
+        <p style="font-size:.8rem; color:var(--muted);">Last updated: June 2025</p>
+
+      </article>
+    </div>
+
+    <!-- Back button -->
+    <div class="back-bar">
+      <a href="../../index.html" class="btn btn-ghost">← Back to DS Developments</a>
+    </div>
+
+  </div>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────── -->
+  <footer>
+    <p>© 2025 Damien Smith · DS Developments · SaveVault is MIT Licensed</p>
+  </footer>
+
+  <script>
+    function toggleDropdown() {
+      const d = document.getElementById('appsDropdown');
+      d.classList.toggle('open');
+    }
+    document.addEventListener('click', function(e) {
+      const d = document.getElementById('appsDropdown');
+      if (!d.contains(e.target)) d.classList.remove('open');
+    });
+  </script>
+
+</body>
+</html>

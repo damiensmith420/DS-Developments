@@ -459,6 +459,7 @@ footer {
 }
 
 .tab-btn {
+  display: inline-block;
   padding: .85rem 1.75rem;
   font-size: .88rem;
   font-weight: 600;
@@ -470,6 +471,7 @@ footer {
   font-family: var(--font);
   transition: color .2s, border-color .2s;
   white-space: nowrap;
+  text-decoration: none;
 }
 .tab-btn:hover  { color: var(--text); }
 .tab-btn.active {

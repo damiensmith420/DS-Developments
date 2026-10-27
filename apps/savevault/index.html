@@ -47,19 +47,16 @@
       <h1>SaveVault</h1>
       <p>Back up your game saves directly to your own Google Drive. No servers. No subscriptions. Just your files, your account.</p>
 
-      <!-- Tab bar -->
-      <div class="tab-bar" role="tablist" aria-label="SaveVault sections">
-        <button class="tab-btn active" role="tab" aria-selected="true"  aria-controls="tab-home"    id="btn-home"    onclick="switchTab('home')">🏠 Overview</button>
-        <button class="tab-btn"        role="tab" aria-selected="false" aria-controls="tab-privacy" id="btn-privacy" onclick="switchTab('privacy')">🔒 Privacy Policy</button>
-        <button class="tab-btn"        role="tab" aria-selected="false" aria-controls="tab-tos"     id="btn-tos"     onclick="switchTab('tos')">📄 Terms of Service</button>
+      <!-- Tab bar — links to separate pages -->
+      <div class="tab-bar">
+        <a href="index.html"   class="tab-btn active">🏠 Overview</a>
+        <a href="privacy.html" class="tab-btn">🔒 Privacy Policy</a>
+        <a href="tos.html"     class="tab-btn">📄 Terms of Service</a>
       </div>
     </div>
 
-    <!-- ── TAB CONTENT ──────────────────────────────────────── -->
+    <!-- ── CONTENT ──────────────────────────────────────────── -->
     <div class="tab-content">
-
-      <!-- HOME TAB ──────────────────────────────────────────── -->
-      <div class="tab-panel active" id="tab-home" role="tabpanel" aria-labelledby="btn-home">
 
         <div class="card-grid" style="margin-bottom: 2.5rem;">
           <div class="card">
@@ -105,165 +102,6 @@
           </a>
         </div>
 
-      </div><!-- /tab-home -->
-
-      <!-- PRIVACY TAB ──────────────────────────────────────── -->
-      <div class="tab-panel" id="tab-privacy" role="tabpanel" aria-labelledby="btn-privacy">
-        <article class="legal">
-
-          <h2>1. Overview</h2>
-          <p>
-            SaveVault is a free, open-source desktop application for Windows that backs up your video game
-            save files to your own Google Drive account. It is a personal utility — it has no backend
-            servers, no user accounts, no analytics, and no data collection of any kind.
-          </p>
-
-          <h2>2. Data We Do Not Collect</h2>
-          <p>SaveVault does not collect, transmit, store, or share any personal data. Specifically:</p>
-          <ul>
-            <li>No telemetry or usage statistics are recorded.</li>
-            <li>No crash reports are sent anywhere.</li>
-            <li>No analytics libraries are included.</li>
-            <li>No advertising identifiers are used.</li>
-            <li>No email addresses, names, or any other personally identifiable information are collected by the application or its developer.</li>
-          </ul>
-
-          <h2>3. Google Account Access</h2>
-          <p>
-            To back up your saves, SaveVault asks you to sign in with your Google account using the
-            standard OAuth 2.0 consent screen. SaveVault requests only the following permission scope:
-          </p>
-          <div class="highlight-box">
-            <code>https://www.googleapis.com/auth/drive.file</code>
-          </div>
-          <p>
-            This scope limits the application so that it can <strong>only</strong> see and modify files that
-            SaveVault itself created. It cannot read, access, browse, list, modify, or delete any other
-            files or folders in your Google Drive.
-          </p>
-          <p>
-            Your OAuth token is stored locally on your own computer at:
-          </p>
-          <div class="highlight-box">
-            <code>%USERPROFILE%\.savevault\token.json</code>
-          </div>
-          <p>
-            This file never leaves your machine except through the standard Google OAuth token-refresh
-            mechanism that communicates directly with Google's servers. The developer of SaveVault never
-            receives, sees, or has access to your token, your email address, or any content of your
-            Google Drive.
-          </p>
-
-          <h2>4. Your Save Files</h2>
-          <p>
-            Your save files are uploaded directly from your PC to your own Google Drive account using the
-            Google Drive API. They are not routed through any third-party server. The developer of SaveVault
-            has no access to your files.
-          </p>
-
-          <h2>5. Third-Party Services</h2>
-          <p>
-            SaveVault interacts only with Google's OAuth 2.0 and Google Drive v3 APIs. Your use of
-            Google services is governed by Google's own
-            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>.
-          </p>
-
-          <h2>6. Changes to This Policy</h2>
-          <p>
-            If this policy is ever updated, the new version will be committed to the SaveVault GitHub
-            repository with an updated date. The current version always reflects the current release.
-          </p>
-
-          <h2>7. Contact</h2>
-          <p>
-            SaveVault is an open-source project. For questions or concerns, please open an issue on the
-            <a href="https://github.com/damiensmith420/savevault" target="_blank" rel="noopener">GitHub repository</a>.
-          </p>
-
-          <hr class="divider" />
-          <p style="font-size:.8rem; color:var(--muted);">Last updated: June 2025</p>
-
-        </article>
-      </div><!-- /tab-privacy -->
-
-      <!-- TOS TAB ──────────────────────────────────────────── -->
-      <div class="tab-panel" id="tab-tos" role="tabpanel" aria-labelledby="btn-tos">
-        <article class="legal">
-
-          <h2>1. Acceptance</h2>
-          <p>
-            By downloading or using SaveVault ("the Application"), you agree to these Terms of Service.
-            If you do not agree, do not use the Application.
-          </p>
-
-          <h2>2. What SaveVault Does</h2>
-          <p>
-            SaveVault is a free, open-source desktop utility that copies video game save files from your
-            Windows PC to a folder in your own Google Drive account. It performs no other function.
-          </p>
-
-          <h2>3. License</h2>
-          <p>
-            SaveVault is released under the MIT License. You are free to use, copy, modify, merge,
-            publish, distribute, sublicense, and/or sell copies of the software, subject to the
-            conditions stated in the MIT License included with the source code.
-          </p>
-
-          <h2>4. Google Services</h2>
-          <p>
-            SaveVault uses the Google Drive API and Google OAuth 2.0 to access your Google account.
-            By signing in, you also agree to Google's
-            <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms of Service</a>.
-            SaveVault requests only the <code>drive.file</code> permission scope, which restricts the
-            Application to files it has created. It cannot access any other data in your Google account.
-          </p>
-
-          <h2>5. Your Responsibilities</h2>
-          <ul>
-            <li>Ensuring you have the right to back up the game save files you select.</li>
-            <li>Maintaining the security of your own Google account.</li>
-            <li>Any Google Drive storage costs associated with your account (governed by Google's own pricing and policies).</li>
-          </ul>
-
-          <h2>6. No Warranties</h2>
-          <p>
-            THE APPLICATION IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
-            INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
-            PURPOSE, AND NON-INFRINGEMENT. USE AT YOUR OWN RISK.
-          </p>
-          <p>In particular, the developer does not guarantee that:</p>
-          <ul>
-            <li>Every sync will complete without error.</li>
-            <li>Your save files will be fully recoverable in all circumstances.</li>
-          </ul>
-          <p>You are encouraged to maintain additional backups of important save files.</p>
-
-          <h2>7. Limitation of Liability</h2>
-          <p>
-            IN NO EVENT SHALL THE DEVELOPER BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY —
-            WHETHER IN CONTRACT, TORT, OR OTHERWISE — ARISING FROM, OUT OF, OR IN CONNECTION WITH THE
-            APPLICATION OR THE USE THEREOF, INCLUDING ANY LOSS OF GAME PROGRESS OR SAVE DATA.
-          </p>
-
-          <h2>8. Changes to These Terms</h2>
-          <p>
-            These Terms may be updated at any time. The current version will always be available in the
-            SaveVault GitHub repository. Continued use of the Application after an update constitutes
-            acceptance of the revised Terms.
-          </p>
-
-          <h2>9. Contact</h2>
-          <p>
-            SaveVault is an open-source project. For questions or concerns, please open an issue on the
-            <a href="https://github.com/damiensmith420/savevault" target="_blank" rel="noopener">GitHub repository</a>.
-          </p>
-
-          <hr class="divider" />
-          <p style="font-size:.8rem; color:var(--muted);">Last updated: June 2025</p>
-
-        </article>
-      </div><!-- /tab-tos -->
-
     </div><!-- /tab-content -->
 
     <!-- Back button -->
@@ -281,29 +119,6 @@
   </footer>
 
   <script>
-    function switchTab(name) {
-      // Deactivate all
-      document.querySelectorAll('.tab-btn').forEach(b => {
-        b.classList.remove('active');
-        b.setAttribute('aria-selected', 'false');
-      });
-      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-
-      // Activate chosen
-      document.getElementById('btn-' + name).classList.add('active');
-      document.getElementById('btn-' + name).setAttribute('aria-selected', 'true');
-      document.getElementById('tab-' + name).classList.add('active');
-    }
-
-    // Support ?tab=privacy or ?tab=tos in URL (useful for direct Google links)
-    (function() {
-      const params = new URLSearchParams(window.location.search);
-      const tab = params.get('tab');
-      if (tab === 'privacy' || tab === 'tos' || tab === 'home') {
-        switchTab(tab);
-      }
-    })();
-
     function toggleDropdown() {
       const d = document.getElementById('appsDropdown');
       d.classList.toggle('open');
