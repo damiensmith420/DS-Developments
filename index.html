@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DS Developments — Damien Smith</title>
+  <meta name="description" content="Independent developer building useful, fun, and thoughtful software. Projects by Damien Smith." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+
+  <!-- ── NAV ──────────────────────────────────────────────── -->
+  <nav>
+    <a class="nav-brand" href="index.html">
+      <span class="dot"></span>
+      DS Developments
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li>
+        <div class="dropdown" id="appsDropdown">
+          <button class="dropdown-toggle" onclick="toggleDropdown()" aria-haspopup="true" aria-expanded="false">
+            Apps
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+              <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="dropdown-menu" role="menu">
+            <a href="apps/savevault/index.html" role="menuitem">
+              <span class="app-icon">SV</span>
+              SaveVault
+            </a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- ── HERO ─────────────────────────────────────────────── -->
+  <section class="hero" id="home">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-glow"  aria-hidden="true"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="pulse"></span>
+        Independent Developer
+      </div>
+      <h1>
+        Hi, I'm <span class="name">Damien Smith</span>.<br />
+        I build things that matter.
+      </h1>
+      <p>
+        From practical utilities to passion projects — I write software that's
+        useful, honest, and built right. No fluff, no bloat. Just tools that do
+        exactly what they say.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M2 5h12M2 8h8M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          View Projects
+        </a>
+        <a href="https://github.com/damiensmith420" class="btn btn-ghost" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38v-1.34c-2.23.48-2.7-1.07-2.7-1.07-.36-.92-.88-1.17-.88-1.17-.72-.49.06-.48.06-.48.8.06 1.22.82 1.22.82.71 1.21 1.87.86 2.32.66.07-.51.28-.86.5-1.06-1.77-.2-3.64-.89-3.64-3.95 0-.87.31-1.58.82-2.14-.08-.2-.36-1.01.08-2.1 0 0 .67-.22 2.2.82A7.67 7.67 0 018 3.8c.68 0 1.36.09 2 .27 1.52-1.04 2.2-.82 2.2-.82.44 1.09.16 1.9.08 2.1.51.56.82 1.27.82 2.14 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.19c0 .21.15.46.55.38A8 8 0 0016 8c0-4.42-3.58-8-8-8z"/>
+          </svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ─────────────────────────────────────────────── -->
+  <section id="about" style="background: #0a0c12; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="section-inner">
+      <div class="section-label">About Me</div>
+      <h2 class="section-title">One person. A lot of ideas.</h2>
+      <p class="section-sub">
+        I'm an independent developer who builds software because I genuinely enjoy it.
+        I like solving real problems with clean solutions — whether that's a tool I
+        personally needed or an idea that just wouldn't leave me alone.
+      </p>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-icon">🛠️</div>
+          <h3>Practical Tools</h3>
+          <p>
+            I build things I actually use. If something is annoying or broken in my
+            workflow, I fix it — and then share it so you don't have to deal with it either.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔒</div>
+          <h3>Privacy First</h3>
+          <p>
+            No trackers. No analytics. No accounts you didn't ask for. Your data
+            belongs to you — my software is just the tool, not the product.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-icon">⚡</div>
+          <h3>Lightweight & Direct</h3>
+          <p>
+            Every project does exactly what it says on the tin. No subscription
+            upsells, no feature bloat, no dark patterns. Just software that works.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🎮</div>
+          <h3>Fun Projects Too</h3>
+          <p>
+            Not everything has to be serious. Sometimes I build things just because
+            the idea is interesting — and those often end up being the most useful.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ───────────────────────────────────────────── -->
+  <section id="projects">
+    <div class="section-inner">
+      <div class="section-label">Apps &amp; Projects</div>
+      <h2 class="section-title">What I've built</h2>
+      <p class="section-sub">
+        Each project is released free and open-source. Download, use, fork, or
+        contribute — everything lives on GitHub.
+      </p>
+
+      <a href="apps/savevault/index.html" class="app-card">
+        <div class="app-card-icon">💾</div>
+        <div class="app-card-body">
+          <h3>SaveVault</h3>
+          <p>Automatically back up your game save files to your own Google Drive. Free, open-source, Windows.</p>
+        </div>
+        <span class="app-card-arrow">→</span>
+      </a>
+
+      <!-- Future apps will be added here -->
+    </div>
+  </section>
+
+  <!-- ── PHILOSOPHY ─────────────────────────────────────────── -->
+  <section style="background: #0a0c12; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="section-inner" style="text-align: center; max-width: 640px;">
+      <div class="section-label">Philosophy</div>
+      <h2 class="section-title">Why independent?</h2>
+      <p style="color: var(--muted); font-size: 1rem; line-height: 1.8; margin-bottom: 0;">
+        Big software often comes with big strings attached — telemetry, paywalls,
+        accounts you didn't ask for, and features that get removed in the next update.
+        As an independent developer I answer to my users, not investors. Every
+        decision is made based on what's actually useful, what's actually fair, and
+        what's actually worth shipping. That's the deal I'm making with anyone who
+        uses my work.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ─────────────────────────────────────────────── -->
+  <section id="contact">
+    <div class="section-inner" style="text-align: center; max-width: 560px;">
+      <div class="section-label">Contact</div>
+      <h2 class="section-title">Get in touch</h2>
+      <p class="section-sub" style="margin: 0 auto 2rem;">
+        Got a question about a project, found a bug, or want to suggest something?
+        Open an issue on GitHub — it's the best way to reach me.
+      </p>
+      <a href="https://github.com/damiensmith420" class="btn btn-primary" target="_blank" rel="noopener">
+        Visit my GitHub
+      </a>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────── -->
+  <footer>
+    <p>© 2025 Damien Smith · DS Developments · All projects released under the MIT License</p>
+  </footer>
+
+  <script>
+    function toggleDropdown() {
+      const d = document.getElementById('appsDropdown');
+      d.classList.toggle('open');
+    }
+    // Close when clicking outside
+    document.addEventListener('click', function(e) {
+      const d = document.getElementById('appsDropdown');
+      if (!d.contains(e.target)) d.classList.remove('open');
+    });
+  </script>
+
+</body>
+</html>

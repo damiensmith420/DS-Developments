@@ -1,0 +1,23 @@
+{
+  "name": "DS Developments",
+  "short_name": "DS Dev",
+  "description": "Independent developer — useful tools, fun projects, honest software.",
+  "start_url": "/",
+  "display": "browser",
+  "theme_color": "#0d0f14",
+  "background_color": "#0d0f14",
+  "lang": "en",
+  "apps": [
+    {
+      "id": "savevault",
+      "name": "SaveVault",
+      "description": "Back up game save files to your own Google Drive.",
+      "url": "apps/savevault/index.html",
+      "privacy_policy": "apps/savevault/index.html?tab=privacy",
+      "terms_of_service": "apps/savevault/index.html?tab=tos",
+      "source": "https://github.com/damiensmith420/savevault",
+      "platform": "Windows",
+      "license": "MIT"
+    }
+  ]
+}
